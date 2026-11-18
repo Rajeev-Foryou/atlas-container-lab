@@ -12,6 +12,10 @@ if (!appEnv) {
   console.error("Error: APP_ENV is not set");
   process.exit(1);
 }
+if (!appPort) {
+  console.error("Error: App_Port is not set");
+  process.exit(1);
+}
 
 // Single route
 app.get("/", (req, res) => {
